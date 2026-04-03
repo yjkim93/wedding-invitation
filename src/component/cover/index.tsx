@@ -9,13 +9,13 @@ import { COVER_IMAGE } from "../../images"
 import { LazyDiv } from "../lazyDiv"
 
 const DAY_OF_WEEK = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
+  "일요일",
+  "월요일",
+  "화요일",
+  "수요일",
+  "목요일",
+  "금요일",
+  "토요일",
 ]
 
 export const Cover = () => {
@@ -34,7 +34,7 @@ export const Cover = () => {
       <div className="image-wrapper">
         <img src={COVER_IMAGE} alt="sample" />
       </div>
-      <div className="subtitle">Save the date for the wedding of</div>
+      <div className="subtitle">결혼식에 초대합니다</div>
       <div className="names">
         {GROOM_FULLNAME}
         <div className="divider" />

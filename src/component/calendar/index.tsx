@@ -42,30 +42,30 @@ export const Calendar = () => {
 
   return (
     <LazyDiv className="card calendar">
-      <h2 className="english">The Wedding Day</h2>
+      <h2>예식 날짜</h2>
       <div className="break" />
       {WEDDING_DATE.format(WEDDING_DATE_FORMAT)}
       <div className="calendar-wrapper">
         <div className="head holiday">
-          <span>Su</span>
+          <span>일</span>
         </div>
         <div className="head">
-          <span>Mo</span>
+          <span>월</span>
         </div>
         <div className="head">
-          <span>Tu</span>
+          <span>화</span>
         </div>
         <div className="head">
-          <span>We</span>
+          <span>수</span>
         </div>
         <div className="head">
-          <span>Th</span>
+          <span>목</span>
         </div>
         <div className="head">
-          <span>Fr</span>
+          <span>금</span>
         </div>
         <div className="head">
-          <span>Sa</span>
+          <span>토</span>
         </div>
         {Array.from({ length: firstDayOfWeek }).map((_, i) => (
           <div key={i} />
@@ -100,13 +100,13 @@ export const Calendar = () => {
       </div>
       <div className="countdown-wrapper">
         <div className="countdown">
-          <div className="unit">DAY</div>
+          <div className="unit">일</div>
           <div />
-          <div className="unit">HOUR</div>
+          <div className="unit">시간</div>
           <div />
-          <div className="unit">MIN</div>
+          <div className="unit">분</div>
           <div />
-          <div className="unit">SEC</div>
+          <div className="unit">초</div>
           <div className="count">{diffs.days}</div>
           <span>:</span>
           <div className="count">{diffs.hours}</div>
