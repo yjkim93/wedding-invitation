@@ -2,13 +2,7 @@ import nmapIcon from "../../icons/nmap-icon.png"
 import knaviIcon from "../../icons/knavi-icon.png"
 import tmapIcon from "../../icons/tmap-icon.png"
 import mapImage from "../../images/map.png"
-import { useKakao } from "../store"
-import {
-  KMAP_PLACE_ID,
-  LOCATION,
-  NMAP_PLACE_ID,
-  WEDDING_HALL_POSITION,
-} from "../../const"
+import { KMAP_PLACE_ID, LOCATION, NMAP_PLACE_ID, WEDDING_HALL_POSITION } from "../../const"
 
 const checkDevice = () => {
   const userAgent = window.navigator.userAgent
@@ -18,8 +12,6 @@ const checkDevice = () => {
 }
 
 export const Map = () => {
-  const kakao = useKakao()
-
   return (
     <>
       <div className="map-wrapper">
@@ -47,24 +39,10 @@ export const Map = () => {
         </button>
         <button
           onClick={() => {
-            switch (checkDevice()) {
-              case "ios":
-              case "android":
-                if (kakao)
-                  kakao.Navi.start({
-                    name: LOCATION,
-                    x: WEDDING_HALL_POSITION[0],
-                    y: WEDDING_HALL_POSITION[1],
-                    coordType: "wgs84",
-                  })
-                break
-              default:
-                window.open(
-                  `https://map.kakao.com/link/map/${KMAP_PLACE_ID}`,
-                  "_blank",
-                )
-                break
-            }
+            window.open(
+              `https://map.kakao.com/link/map/${KMAP_PLACE_ID}`,
+              "_blank",
+            )
           }}
         >
           <img src={knaviIcon} alt="kakao-navi-icon" />

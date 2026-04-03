@@ -278,7 +278,7 @@ export const Gallery = () => {
 
   return (
     <LazyDiv className="card gallery">
-      <h2 className="english">Gallery</h2>
+      <h2>갤러리</h2>
       <div className="carousel-wrapper">
         <div
           className="carousel"
