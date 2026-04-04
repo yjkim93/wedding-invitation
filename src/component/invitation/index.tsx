@@ -8,7 +8,7 @@ export const Invitation = () => {
       <div className="break" />
 
       <div className="content">따스한 봄볕이 가득한 오월의 날</div>
-      <div className="content">소중한 분들을 모시고</div>
+      <div className="content">소중한 가족, 친지분들을 모시고</div>
       <div className="content">사랑의 약속을 하려고 합니다.</div>
       <div className="break" />
       <div className="content">푸른 신록처럼 서로에게 힘이 되고,</div>
